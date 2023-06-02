@@ -1,14 +1,20 @@
 import PropTypes from 'prop-types';
 import css from './ElementContacts.module.css';
 
-export function ElementContacts({contacts, onDeleteContact}) {
+export function ElementContacts({ contacts, onDeleteContact }) {
   return (
     <p className={css.element}>
       <span className={css.name}>{contacts.name}:</span>
       <span className={css.tel}>{contacts.number}</span>
-      <button type='button' className={css.btnDelete} onClick={() => onDeleteContact(contacts.id)}>Delete</button>
+      <button
+        type="button"
+        className={css.btnDelete}
+        onClick={() => onDeleteContact(contacts.id)}
+      >
+        Delete
+      </button>
     </p>
-  )
+  );
 }
 
 ElementContacts.propTypes = {
